@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies - Job Portal</title>
+    <link rel="stylesheet" href="companies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-building"></i> Top Companies</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="joblisting.html"><i class="fas fa-list"></i> Job Listings</a></li>
+                    <li><a href="companies.html" class="active"><i class="fas fa-building"></i> Companies</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="companies-section">
+        <div class="container">
+            <div class="companies-grid">
+                <!-- Google -->
+                <div class="company-card" onclick="showCompanyDetails('google')">
+                    <div class="company-logo">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Mountain View, CA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Technology</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Microsoft -->
+                <div class="company-card" onclick="showCompanyDetails('microsoft')">
+                    <div class="company-logo">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Redmond, WA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Technology</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Apple -->
+                <div class="company-card" onclick="showCompanyDetails('apple')">
+                    <div class="company-logo">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>Apple</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Cupertino, CA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Technology</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Amazon -->
+                <div class="company-card" onclick="showCompanyDetails('amazon')">
+                    <div class="company-logo">
+                        <i class="fab fa-amazon"></i>
+                    </div>
+                    <h3>Amazon</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Technology/E-commerce</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Meta (Facebook) -->
+                <div class="company-card" onclick="showCompanyDetails('meta')">
+                    <div class="company-logo">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Meta</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Menlo Park, CA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Social Media/Technology</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Netflix -->
+                <div class="company-card" onclick="showCompanyDetails('netflix')">
+                    <div class="company-logo">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Netflix</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Los Gatos, CA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Streaming/Entertainment</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Tesla -->
+                <div class="company-card" onclick="showCompanyDetails('tesla')">
+                    <div class="company-logo">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Tesla</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Palo Alto, CA</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Automotive/Technology</p>
+                    <button class="view-details">View Details</button>
+                </div>
+
+                <!-- Oracle -->
+                <div class="company-card" onclick="showCompanyDetails('oracle')">
+                    <div class="company-logo">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Oracle</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                    <p class="industry"><i class="fas fa-industry"></i> Enterprise Software</p>
+                    <button class="view-details">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Details Modal -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="companyDetails"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const companyData = {
+            google: {
+                name: "Google",
+                description: "Google is a multinational technology company specializing in internet-related services and products.",
+                benefits: ["Competitive salary", "Health insurance", "Free meals", "Flexible work hours", "Stock options"],
+                culture: "Innovation-driven culture with emphasis on creativity and collaboration",
+                openPositions: ["Software Engineer", "Product Manager", "Data Scientist", "UX Designer"],
+                technologies: ["Python", "Java", "Go", "Angular", "TensorFlow"],
+                website: "https://careers.google.com"
+            },
+            // Add data for other companies
+        };
+
+        function showCompanyDetails(company) {
+            const modal = document.getElementById('companyModal');
+            const detailsDiv = document.getElementById('companyDetails');
+            const data = companyData[company] || {
+                name: company.charAt(0).toUpperCase() + company.slice(1),
+                description: "Detailed information coming soon!",
+                benefits: ["Competitive salary", "Health benefits", "Professional development"],
+                culture: "Great work environment with focus on innovation",
+                openPositions: ["Multiple positions available"],
+                technologies: ["Various technologies"],
+                website: "#"
+            };
+
+            let html = `
+                <h2>${data.name}</h2>
+                <div class="company-info">
+                    <h3>About</h3>
+                    <p>${data.description}</p>
+                    
+                    <h3>Benefits</h3>
+                    <ul>
+                        ${data.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+                    </ul>
+
+                    <h3>Company Culture</h3>
+                    <p>${data.culture}</p>
+
+                    <h3>Open Positions</h3>
+                    <ul>
+                        ${data.openPositions.map(position => `<li>${position}</li>`).join('')}
+                    </ul>
+
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags">
+                        ${data.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+
+                    <a href="${data.website}" target="_blank" class="career-link">Visit Career Page</a>
+                </div>
+            `;
+            detailsDiv.innerHTML = html;
+            modal.style.display = 'block';
+        }
+
+        // Close modal when clicking X or outside
+        document.querySelector('.close-modal').onclick = function() {
+            document.getElementById('companyModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('companyModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

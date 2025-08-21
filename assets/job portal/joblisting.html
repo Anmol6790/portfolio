@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - Job Portal</title>
+    <link rel="stylesheet" href="joblisting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-list"></i> Job Listings</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="joblisting.html" class="active"><i class="fas fa-list"></i> Job Listings</a></li>
+                    <li><a href="companies.html"><i class="fas fa-building"></i> Companies</a></li>
+                    <li><a href="skill-assessment.html"><i class="fas fa-tasks"></i> Skill Tests</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for jobs, companies, or keywords...">
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label>Location</label>
+                    <select id="locationFilter">
+                        <option value="">All Locations</option>
+                        <option value="delhi">Delhi NCR</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="pune">Pune</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Job Type</label>
+                    <select id="jobTypeFilter">
+                        <option value="">All Types</option>
+                        <option value="full-time">Full Time</option>
+                        <option value="part-time">Part Time</option>
+                        <option value="contract">Contract</option>
+                        <option value="remote">Remote</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Experience Level</label>
+                    <select id="experienceFilter">
+                        <option value="">All Levels</option>
+                        <option value="entry">Entry Level</option>
+                        <option value="mid">Mid Level</option>
+                        <option value="senior">Senior Level</option>
+                        <option value="lead">Lead</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Salary Range</label>
+                    <select id="salaryFilter">
+                        <option value="">All Ranges</option>
+                        <option value="0-300000">0-3 LPA</option>
+                        <option value="300000-600000">3-6 LPA</option>
+                        <option value="600000-1000000">6-10 LPA</option>
+                        <option value="1000000+">10+ LPA</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="jobs-section">
+        <div class="container">
+            <div class="jobs-header">
+                <h2>Featured Jobs</h2>
+                <div class="jobs-count">Showing <span id="jobCount">10</span> jobs</div>
+            </div>
+            
+            <div class="jobs-grid">
+                <!-- Job Card 1 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Senior Software Engineer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            5+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            25-35 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Cloud</span>
+                        <span class="skill-tag">System Design</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Logo" class="company-logo">
+                        <div class="job-card-title">
+                <h3>Frontend Developer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Microsoft
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Hyderabad, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            3+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            18-25 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">UI/UX</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 - Amazon -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Full Stack Developer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Amazon
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Pune, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            4+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            20-30 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 - Meta -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/meta.com" alt="Meta Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>AI/ML Engineer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Meta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            5+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            30-45 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 5 - Adobe -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/adobe.com" alt="Adobe Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>UI/UX Designer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Adobe
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Noida, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            3+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            15-25 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">UI Design</span>
+                        <span class="skill-tag">Prototyping</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 6 - IBM -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/ibm.com" alt="IBM Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Cloud Architect</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                IBM
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mumbai, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            6+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            28-40 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 7 - Infosys -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/infosys.com" alt="Infosys Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Java Developer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Infosys
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Hyderabad, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            2+ years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            8-12 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 8 - Wipro -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/wipro.com" alt="Wipro Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Data Analyst</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Wipro
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            1-3 years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            6-10 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 9 - TCS -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/tcs.com" alt="TCS Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>DevOps Engineer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                TCS
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Pune, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            3-5 years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            12-18 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 10 - Accenture -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/accenture.com" alt="Accenture Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Business Analyst</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Accenture
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mumbai, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            2-4 years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            10-15 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">JIRA</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 11 - Dell -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/dell.com" alt="Dell Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Product Manager</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Dell
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            5-8 years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            25-35 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">Product Management</span>
+                        <span class="skill-tag">Strategy</span>
+                        <span class="skill-tag">Analytics</span>
+                        <span class="skill-tag">Leadership</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Job Card 12 - Intel -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <img src="https://logo.clearbit.com/intel.com" alt="Intel Logo" class="company-logo">
+                        <div class="job-card-title">
+                            <h3>Hardware Engineer</h3>
+                            <div class="company-name">
+                                <i class="fas fa-building"></i>
+                                Intel
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Bangalore, India
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            Full Time
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            4-7 years
+                        </div>
+                        <div class="detail-item salary">
+                            <i class="fas fa-rupee-sign"></i>
+                            20-30 LPA
+                        </div>
+                    </div>
+                    <div class="job-card-skills">
+                        <span class="skill-tag">VLSI</span>
+                        <span class="skill-tag">Verilog</span>
+                        <span class="skill-tag">FPGA</span>
+                        <span class="skill-tag">PCB Design</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">
+                    <i class="fas fa-sync"></i> Load More Jobs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <img src="" alt="" id="modalCompanyLogo" class="modal-company-logo">
+                <div class="modal-title">
+                    <h2 id="modalJobTitle"></h2>
+                    <p id="modalCompanyName"></p>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="job-details-section">
+                    <h3>Job Details</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="modalLocation"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span id="modalJobType"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span id="modalExperience"></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span id="modalSalary"></span>
+                        </div>
+                    </div>
+
+                    <div class="job-description">
+                        <h3>Job Description</h3>
+                        <div id="modalDescription"></div>
+                    </div>
+
+                    <div class="required-skills">
+                        <h3>Required Skills</h3>
+                        <div id="modalSkills" class="skills-container"></div>
+                    </div>
+                </div>
+
+                <div class="application-form">
+                    <h3>Apply for this position</h3>
+                    <form id="jobApplicationForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Total Experience *</label>
+                            <input type="text" id="experience" name="experience" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentCompany">Current Company</label>
+                            <input type="text" id="currentCompany" name="currentCompany">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="noticePeriod">Notice Period (in days) *</label>
+                            <input type="number" id="noticePeriod" name="noticePeriod" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resume">Resume/CV *</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                            <small>Accepted formats: PDF, DOC, DOCX (Max size: 5MB)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="coverLetter">Cover Letter</label>
+                            <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-application-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Support -->
+    <div class="chat-support">
+        <button class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">3</span>
+        </button>
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <h3><i class="fas fa-headset"></i> Job Portal Support</h3>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message support">
+                    <div class="message-content">
+                        Hello! 👋 How can I help you today? I can assist you with:
+                        <ul>
+                            <li>Finding jobs</li>
+                            <li>Application process</li>
+                            <li>Company information</li>
+                            <li>Technical issues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+            </div>
+
+    <!-- Reviews & Ratings Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <h2><i class="fas fa-star"></i> Reviews & Ratings</h2>
+                <button class="add-review-btn">
+                    <i class="fas fa-plus"></i> Add Review
+                </button>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google Logo" class="company-logo">
+                        <div class="review-title">
+                            <h3>Google</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Excellent work culture and opportunities for growth. The interview process was smooth and professional."</p>
+                        <div class="review-meta">
+                            <span class="reviewer">John Doe</span>
+                            <span class="review-date">2 months ago</span>
+                            <span class="job-title">Senior Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Logo" class="company-logo">
+                        <div class="review-title">
+                            <h3>Microsoft</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Great work-life balance and competitive salary. The team is supportive and collaborative."</p>
+                        <div class="review-meta">
+                            <span class="reviewer">Sarah Smith</span>
+                            <span class="review-date">1 month ago</span>
+                            <span class="job-title">Frontend Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon Logo" class="company-logo">
+                        <div class="review-title">
+                            <h3>Amazon</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Fast-paced environment with lots of learning opportunities. Benefits package is comprehensive."</p>
+                        <div class="review-meta">
+                            <span class="reviewer">Mike Johnson</span>
+                            <span class="review-date">3 months ago</span>
+                            <span class="job-title">Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-star"></i> Add Your Review</h2>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="companySelect">Select Company *</label>
+                        <select id="companySelect" required>
+                            <option value="">Choose a company</option>
+                            <option value="google">Google</option>
+                            <option value="microsoft">Microsoft</option>
+                            <option value="amazon">Amazon</option>
+                            <option value="meta">Meta</option>
+                            <option value="adobe">Adobe</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title *</label>
+                        <input type="text" id="jobTitle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating *</label>
+                        <div class="rating-input">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Your Review *</label>
+                        <textarea id="reviewText" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pros">Pros</label>
+                        <textarea id="pros" rows="2" placeholder="What did you like about working here?"></textarea>
+            </div>
+
+                    <div class="form-group">
+                        <label for="cons">Cons</label>
+                        <textarea id="cons" rows="2" placeholder="What could be improved?"></textarea>
+            </div>
+
+                    <button type="submit" class="submit-review-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle save button
+        document.querySelectorAll('.save-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.classList.add('saved');
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.classList.remove('saved');
+                }
+            });
+        });
+
+        // Simple search functionality
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const jobCards = document.querySelectorAll('.job-card');
+            
+            jobCards.forEach(card => {
+                const jobTitle = card.querySelector('h3').textContent.toLowerCase();
+                const company = card.querySelector('.company-name').textContent.toLowerCase();
+                const skills = Array.from(card.querySelectorAll('.skill-tag')).map(tag => tag.textContent.toLowerCase());
+                
+                if (jobTitle.includes(searchTerm) || 
+                    company.includes(searchTerm) || 
+                    skills.some(skill => skill.includes(searchTerm))) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Application Modal Functionality
+        const modal = document.getElementById('applicationModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Job details data
+        const jobDetails = {
+            'Senior Software Engineer': {
+                company: 'Google',
+                location: 'Bangalore, India',
+                type: 'Full Time',
+                experience: '5+ years',
+                salary: '25-35 LPA',
+                logo: 'https://logo.clearbit.com/google.com',
+                description: `<p>We are looking for a Senior Software Engineer to join our team and help build scalable systems that impact millions of users.</p>
+                <h4>Responsibilities:</h4>
+                <ul>
+                    <li>Design and implement scalable software solutions</li>
+                    <li>Lead technical projects and mentor junior developers</li>
+                    <li>Write clean, maintainable, and efficient code</li>
+                    <li>Participate in code reviews and architectural discussions</li>
+                </ul>
+                <h4>Requirements:</h4>
+                <ul>
+                    <li>5+ years of software development experience</li>
+                    <li>Strong proficiency in Python, Java, and cloud technologies</li>
+                    <li>Experience with distributed systems and microservices</li>
+                    <li>Excellent problem-solving and communication skills</li>
+                </ul>`,
+                skills: ['Python', 'Java', 'Cloud', 'System Design', 'Algorithms', 'Distributed Systems']
+            },
+            // Add more job details here...
+        };
+
+        // Open modal when clicking Apply Now
+        document.querySelectorAll('.apply-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const jobCard = this.closest('.job-card');
+                const jobTitle = jobCard.querySelector('h3').textContent;
+                const jobData = jobDetails[jobTitle] || {
+                    company: jobCard.querySelector('.company-name').textContent.trim(),
+                    location: jobCard.querySelector('.detail-item:nth-child(1)').textContent.trim(),
+                    type: jobCard.querySelector('.detail-item:nth-child(2)').textContent.trim(),
+                    experience: jobCard.querySelector('.detail-item:nth-child(3)').textContent.trim(),
+                    salary: jobCard.querySelector('.detail-item:nth-child(4)').textContent.trim(),
+                    logo: jobCard.querySelector('.company-logo').src,
+                    description: 'Detailed job description will be available soon.',
+                    skills: Array.from(jobCard.querySelectorAll('.skill-tag')).map(tag => tag.textContent)
+                };
+
+                // Populate modal with job details
+                document.getElementById('modalJobTitle').textContent = jobTitle;
+                document.getElementById('modalCompanyName').textContent = jobData.company;
+                document.getElementById('modalLocation').textContent = jobData.location;
+                document.getElementById('modalJobType').textContent = jobData.type;
+                document.getElementById('modalExperience').textContent = jobData.experience;
+                document.getElementById('modalSalary').textContent = jobData.salary;
+                document.getElementById('modalCompanyLogo').src = jobData.logo;
+                document.getElementById('modalDescription').innerHTML = jobData.description;
+                
+                // Populate skills
+                const skillsContainer = document.getElementById('modalSkills');
+                skillsContainer.innerHTML = jobData.skills.map(skill => 
+                    `<span class="skill-tag">${skill}</span>`
+                ).join('');
+
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modal when clicking X
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('jobApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your application! We will review it and get back to you soon.');
+            modal.style.display = 'none';
+            this.reset();
+        });
+
+        // Chat Support Functionality
+        const chatToggle = document.getElementById('chatToggle');
+        const chatContainer = document.getElementById('chatContainer');
+        const closeChat = document.getElementById('closeChat');
+        const messageInput = document.getElementById('messageInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatMessages = document.getElementById('chatMessages');
+
+        chatToggle.addEventListener('click', () => {
+            chatContainer.classList.add('active');
+            chatToggle.classList.add('active');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatContainer.classList.remove('active');
+            chatToggle.classList.remove('active');
+        });
+
+        function addMessage(message, isUser = true) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'support'}`;
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    ${message}
+                </div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function handleUserMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                addMessage(message);
+                messageInput.value = '';
+                
+                // Simulate support response
+                setTimeout(() => {
+                    const responses = [
+                        "I understand your query. Let me help you with that.",
+                        "Thank you for reaching out. I'll assist you right away.",
+                        "I can help you with that. Could you please provide more details?",
+                        "Let me check that information for you.",
+                        "I'll guide you through the process."
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage(randomResponse, false);
+                }, 1000);
+            }
+        }
+
+        sendMessage.addEventListener('click', handleUserMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleUserMessage();
+            }
+        });
+
+        // Reviews & Ratings Functionality
+        const reviewModal = document.getElementById('reviewModal');
+        const addReviewBtn = document.querySelector('.add-review-btn');
+        const reviewForm = document.getElementById('reviewForm');
+        const ratingInputs = document.querySelectorAll('.rating-input i');
+        const ratingValue = document.getElementById('ratingValue');
+
+        addReviewBtn.addEventListener('click', () => {
+            reviewModal.style.display = 'block';
+        });
+
+        ratingInputs.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const rating = star.dataset.rating;
+                ratingInputs.forEach(s => {
+                    if (s.dataset.rating <= rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    } else {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+            });
+        });
+
+        document.querySelector('.rating-input').addEventListener('mouseout', () => {
+            const currentRating = ratingValue.value || 0;
+            ratingInputs.forEach(star => {
+                if (star.dataset.rating <= currentRating) {
+                    star.classList.remove('far');
+                    star.classList.add('fas');
+                } else {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                }
+            });
+        });
+
+        ratingInputs.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.dataset.rating;
+                ratingValue.value = rating;
+                ratingInputs.forEach(s => {
+                    if (s.dataset.rating <= rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    } else {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+            });
+        });
+
+        reviewForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your review! It will be posted after moderation.');
+            reviewModal.style.display = 'none';
+            reviewForm.reset();
+        });
+    </script>
+</body>
+</html>
+            

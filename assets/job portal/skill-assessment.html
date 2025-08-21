@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Assessment Tests - Job Portal</title>
+    <link rel="stylesheet" href="skill-assessment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-tasks"></i> Skill Assessment Tests</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="joblisting.html"><i class="fas fa-list"></i> Job Listings</a></li>
+                    <li><a href="companies.html"><i class="fas fa-building"></i> Companies</a></li>
+                    <li><a href="skill-assessment.html" class="active"><i class="fas fa-tasks"></i> Skill Tests</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Showcase Your Skills</h2>
+                <p>Take our skill assessment tests to stand out to employers and verify your expertise</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section">
+        <div class="container">
+            <h2>Test Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='programming-tests.html'">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <p>JavaScript, Python, Java, and more</p>
+                    <span class="test-count">15 Tests</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='design-tests.html'">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>UI/UX, Graphic Design, Web Design</p>
+                    <span class="test-count">8 Tests</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='data-science-tests.html'">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Analytics, Machine Learning, Statistics</p>
+                    <span class="test-count">12 Tests</span>
+                </div>
+                <div class="category-card" onclick="window.location.href='marketing-tests.html'">
+                    <div class="category-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>Digital Marketing, SEO, Social Media</p>
+                    <span class="test-count">10 Tests</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-tests">
+        <div class="container">
+            <h2>Popular Tests</h2>
+            <div class="tests-grid">
+                <!-- JavaScript Test -->
+                <div class="test-card">
+                    <div class="test-header">
+                        <div class="test-icon">
+                            <i class="fab fa-js" style="color: #4CAF50;"></i>
+                        </div>
+                        <div class="test-info">
+                            <h3>JavaScript Programming</h3>
+                            <span class="difficulty intermediate" style="background: #e8f5e9; color: #4CAF50;">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="test-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>60 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>30 Questions</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>1.2k Attempts</span>
+                        </div>
+                    </div>
+                    <div class="test-description">
+                        Test your JavaScript skills including ES6+, DOM manipulation, and async programming.
+                    </div>
+                    <button class="start-test-btn" onclick="window.location.href='take-test.html?test=' + encodeURIComponent(this.closest('.test-card').querySelector('h3').textContent)">Start Test</button>
+                </div>
+
+                <!-- Python Test -->
+                <div class="test-card">
+                    <div class="test-header">
+                        <div class="test-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="test-info">
+                            <h3>Python Programming</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                    </div>
+                    <div class="test-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>45 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>25 Questions</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>2.5k Attempts</span>
+                        </div>
+                    </div>
+                    <div class="test-description">
+                        Basic Python concepts, data structures, and problem-solving skills.
+                    </div>
+                    <button class="start-test-btn" onclick="window.location.href='take-test.html?test=' + encodeURIComponent(this.closest('.test-card').querySelector('h3').textContent)">Start Test</button>
+                </div>
+
+                <!-- UI/UX Test -->
+                <div class="test-card">
+                    <div class="test-header">
+                        <div class="test-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="test-info">
+                            <h3>UI/UX Design</h3>
+                            <span class="difficulty advanced">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="test-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>90 minutes</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>40 Questions</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>800 Attempts</span>
+                        </div>
+                    </div>
+                    <div class="test-description">
+                        Advanced UI/UX principles, design systems, and user research methodologies.
+                    </div>
+                    <button class="start-test-btn" onclick="window.location.href='take-test.html?test=' + encodeURIComponent(this.closest('.test-card').querySelector('h3').textContent)">Start Test</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Why Take Our Tests?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Get Certified</h3>
+                    <p>Earn certificates to showcase your skills to employers</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your improvement and identify areas for growth</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Stand Out</h3>
+                    <p>Differentiate yourself in job applications</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Join Community</h3>
+                    <p>Connect with others and share learning experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add interactivity for category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Navigate to category-specific test listing
+                const category = card.querySelector('h3').textContent;
+                // Implement category navigation
+            });
+        });
+
+        // Add interactivity for test cards
+        document.querySelectorAll('.start-test-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Implement test starting logic
+                const testCard = btn.closest('.test-card');
+                const testName = testCard.querySelector('h3').textContent;
+                alert(`Starting ${testName}... This feature will be implemented soon.`);
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pload - Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-briefcase"></i> Job Portal</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="joblisting.html"><i class="fas fa-list"></i> Job Listings</a></li>
+                    <li><a href="companies.html"><i class="fas fa-building"></i> Companies</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="resume-upload.html"><i class="fas fa-file-upload"></i> Resume Upload</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="resume-upload-section">
+        <div class="container">
+            <div class="upload-header">
+                <h2><i class="fas fa-file-upload"></i> Upload Your Resume</h2>
+                <p class="subtitle">Take the first step towards your dream job</p>
+            </div>
+            
+            <div class="upload-container">
+                <div class="upload-steps">
+                    <div class="step active">
+                        <i class="fas fa-user"></i>
+                        <span>Personal Info</span>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Complete</span>
+                    </div>
+                </div>
+
+                <form class="resume-form">
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-circle"></i> Personal Information</h3>
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-file-alt"></i> Resume Details</h3>
+                        <div class="form-group">
+                            <label for="resume">Upload Resume</label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                <div class="file-upload-message">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag & drop your resume here or <span>browse</span></p>
+                                    <small>Supported formats: PDF, DOC, DOCX (Max 5MB)</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cover-letter">Cover Letter (Optional)</label>
+                            <textarea id="cover-letter" name="cover-letter" rows="5" placeholder="Write your cover letter here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-upload"></i> Upload Resume
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="resume-tips">
+                <h3><i class="fas fa-lightbulb"></i> Resume Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-edit"></i>
+                        <h4>Format</h4>
+                        <p>Use a professional format and clean layout</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-key"></i>
+                        <h4>Keywords</h4>
+                        <p>Include relevant keywords for your industry</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-check-double"></i>
+                        <h4>Proofread</h4>
+                        <p>Proofread for any errors before uploading</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-file-archive"></i>
+                        <h4>File Size</h4>
+                        <p>Keep file size under 5MB for optimal upload</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Portal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

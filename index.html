@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio website" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Anmol Pandey | Portfolio</title>
+
+    <!-- Icons (optional) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="header">
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="Go to home">AnmolPandey<span>.</span></a>
+        <nav class="nav" id="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#certificates">Certificates</a></li>
+            <li><a class="nav-link" href="#experience">Experience</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class='bx bx-moon'></i>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="site-main">
+      <section class="hero section reveal" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1 class="title">Anmol Pandey</h1>
+            <h2 class="subtitle">Data Analyst</h2>
+            <p class="lead">Data Analyst — I analyze and interpret complex data to deliver actionable insights, helping businesses make informed and data-driven decisions.</p>
+            <div class="cta-group">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                             <a href="assets/Anmol Cv.pdf" class="btn btn-ghost btn-download" download>
+                 <i class='bx bx-download'></i>
+                 Download CV
+               </a>
+            </div>
+            <div class="quick-stats" aria-label="Highlights">
+              <div class="stat" onclick="scrollToSection('projects')" style="cursor: pointer;">
+                <i class='bx bx-briefcase'></i>
+                <div>
+                  <span id="statProjects">0</span>
+                  <small>Projects</small>
+                </div>
+              </div>
+              <div class="stat" onclick="scrollToSection('certificates')" style="cursor: pointer;">
+                <i class='bx bx-certification'></i>
+                <div>
+                  <span id="statCerts">0</span>
+                  <small>Certificates</small>
+                </div>
+              </div>
+              <div class="stat" onclick="scrollToSection('skills')" style="cursor: pointer;">
+                <i class='bx bx-cog'></i>
+                <div>
+                  <span id="statSkills">0</span>
+                  <small>Skills</small>
+                </div>
+              </div>
+            </div>
+                         <div class="socials" aria-label="Social links">
+               <a href="https://github.com/Anmol6790" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+               <a href="https://www.linkedin.com/in/anmol-pandey-08b864297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i></a>
+             </div>
+          </div>
+          <div class="hero-visual">
+            <img class="avatar-img" src="assets/anmol_dp.jpg" alt="Anmol Pandey" />
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" class="section reveal" aria-label="Certificates">
+        <div class="container">
+          <div class="section-head">
+            <h3 class="section-title">Certificates</h3>
+            <div class="cert-summary">Total: <span id="certCount">0</span></div>
+          </div>
+          <div class="cert-groups">
+            <section class="cert-group" aria-labelledby="cg1">
+              <h4 id="cg1">Technical Skills</h4>
+              <ul class="cert-list">
+                <li class="cert-item">
+                  <i class='bx bx-certification' aria-hidden="true"></i>
+                  <div>
+                    <p class="cert-name">Python Programming</p>
+                    <p class="cert-meta">Infosys Springboard • 2024</p>
+                    <div class="cert-media"><img src="assets/Python.jpeg" alt="Python Programming Certificate" /></div>
+                    <div class="cert-actions">
+                      <a href="assets/Python.jpeg" class="btn btn-small" target="_blank" rel="noopener">View</a>
+                      <a href="assets/Python.jpeg" class="btn btn-small btn-ghost" download="Python-Certificate.jpg">Download</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="cert-group" aria-labelledby="cg2">
+              <h4 id="cg2">Data Analytics</h4>
+              <ul class="cert-list">
+                <li class="cert-item">
+                  <i class='bx bx-certification' aria-hidden="true"></i>
+                  <div>
+                    <p class="cert-name">Power BI Mastery</p>
+                    <p class="cert-meta">Infosys Springboard • 2025</p>
+                    <div class="cert-media"><img src="assets/powerbi.jpeg" alt="Power BI Certificate" /></div>
+                    <div class="cert-actions">
+                      <a href="assets/powerbi.jpeg" class="btn btn-small" target="_blank" rel="noopener">View</a>
+                      <a href="assets/powerbi.jpeg" class="btn btn-small btn-ghost" download="PowerBI-Certificate.jpg">Download</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="cert-group" aria-labelledby="cg3">
+              <h4 id="cg3">Web Development</h4>
+              <ul class="cert-list">
+                <li class="cert-item">
+                  <i class='bx bx-certification' aria-hidden="true"></i>
+                  <div>
+                    <p class="cert-name">R Programming</p>
+                    <p class="cert-meta">Coursera • 2025</p>
+                    <div class="cert-media"><img src="assets/r.png" alt="Frontend Development Certificate" /></div>
+                    <div class="cert-actions">
+                      <a href="assets/r.png" class="btn btn-small" target="_blank" rel="noopener">View</a>
+                      <a href="assets/r.png" class="btn btn-small btn-ghost" download="Frontend-Certificate.png">Download</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal" aria-label="About">
+        <div class="container grid two-col">
+          <div>
+            <h3 class="section-title">About</h3>
+            <p>Hi, I’m Anmol Pandey, a passionate BCA student at Lovely Professional University with a strong interest in software development and data analysis. I enjoy building projects that combine creativity with technology and help solve real-world problems.</p>
+            <p>I have hands-on experience with HTML, CSS, Python, R, MySQL, Tableau, Power BI, and C++, and I love exploring new tools and technologies to enhance my skills.</p>
+            <p>My goal is to grow as a software engineer and gain practical experience through internships at top companies like TCS, Wipro, and Flipkart.</p>
+            <p>Apart from coding, I am enthusiastic about data visualization, problem-solving, and continuous learning.</p>
+            <ul class="highlights">
+              <li>BCA student at Lovely Professional University (LPU)</li>
+              <li>Interests: Software Development and Data Analysis</li>
+              <li>Tools: HTML, CSS, Python, R, MySQL, Tableau, Power BI, C++</li>
+              <li>Goal: Internships at TCS, Wipro, and Flipkart</li>
+              <li>Passion: Data visualization, problem-solving, continuous learning</li>
+            </ul>
+          </div>
+          <div>
+            <div class="about-card">
+              <div class="about-row"><span>Location</span><span>Varanasi, Uttar Pradesh</span></div>
+              <div class="about-row"><span>Email</span><span><a href="mailto:anmolpandet6790@gmail.com">anmolpandet6790@gmail.com</a></span></div>
+              <div class="about-row"><span>Phone</span><span><a href="tel:+919335717088">+91 93357 17088</a></span></div>
+              <div class="about-row"><span>Freelance</span><span>Available</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal" aria-label="Skills">
+        <div class="container">
+          <h3 class="section-title">Skills</h3>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Python</span>
+            <span class="chip">R</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">C++</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal" aria-label="Projects">
+        <div class="container">
+          <div class="section-head">
+            <h3 class="section-title">Projects</h3>
+            <div class="filters" role="tablist" aria-label="Project filters">
+              <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+              <button class="filter-btn" data-filter="web" role="tab">Web</button>
+              <button class="filter-btn" data-filter="react" role="tab">React</button>
+              <button class="filter-btn" data-filter="design" role="tab">Design</button>
+            </div>
+          </div>
+          <div class="projects-grid" id="projectsGrid">
+            <article class="project-card" data-tags="web,react">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h4>Job Portal Website</h4>
+                <p>Built with HTML, CSS, and JavaScript for job seekers and employers, featuring search and responsive design.</p>
+                <div class="project-icons" aria-label="Tech stack">
+                  <i class='bx bxl-html5' aria-hidden="true"></i>
+                  <i class='bx bxl-css3' aria-hidden="true"></i>
+                  <i class='bx bxl-javascript' aria-hidden="true"></i>
+                </div>
+                <div class="project-actions">
+                  <a href="https://job-portal-topaz-nu.vercel.app/index.html" class="btn btn-small" aria-label="Live demo" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/JobPortal" class="btn btn-small btn-ghost" aria-label="Source code" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-tags="web,design">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h4>Amazon Sales Analysis</h4>
+                <p>Using Power BI, showcasing KPIs, DAX measures, and interactive dashboards for sales insights.</p>
+                <div class="project-icons" aria-label="Tools">
+                  <i class='bx bx-bar-chart-alt-2' aria-hidden="true"></i>
+                  <i class='bx bx-pie-chart-alt' aria-hidden="true"></i>
+                  <i class='bx bx-line-chart' aria-hidden="true"></i>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Anmol6790/Amozon_Sales_Analysis" class="btn btn-small" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/Amozon_Sales_Analysis" class="btn btn-small btn-ghost" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-tags="react">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h4>WHO Life Expectancy Analysis</h4>
+                <p>Using R — data cleaning, statistical analysis, and visualization to explore global health trends.</p>
+                <div class="project-icons" aria-label="Tools">
+                  <i class='bx bx-data' aria-hidden="true"></i>
+                  <i class='bx bx-line-chart' aria-hidden="true"></i>
+                  <i class='bx bx-pie-chart-alt' aria-hidden="true"></i>
+                </div>
+                <div class="project-actions">
+                  <a href="rpubs.com/anmol_01/LifeExpectancy" class="btn btn-small" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/Global-Life-Expectancy-Analysis-using-WHO-Dataset" class="btn btn-small btn-ghost" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <!-- Only three projects kept as requested -->
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section reveal" aria-label="Experience">
+        <div class="container">
+          <h3 class="section-title">Experience</h3>
+          <div class="timeline">
+            <article class="timeline-item">
+              <h4><strong>Fresher</strong></h4>
+              <p class="meta"><strong>Actively seeking internships and entry‑level roles</strong></p>
+              <ul>
+                <li><strong>BCA student at Lovely Professional University (LPU).</strong></li>
+                <li><strong>Skills: HTML, CSS, Python, R, MySQL, Tableau, Power BI, C++.</strong></li>
+                <li><strong>Interest in internships at TCS, Wipro, and Flipkart.</strong></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section reveal" aria-label="Education">
+        <div class="container">
+          <h3 class="section-title">Education</h3>
+          <div class="cards">
+            <article class="card">
+              <h4>BCA (Bachelor of Computer Applications)</h4>
+              <p class="meta"><strong>Lovely Professional University • 2023 — 2026</strong></p>
+              <p><strong>Currently pursuing with a strong foundation in programming, software development, and data analytics. Actively developing expertise in tools like Python, R, Power BI, Tableau, and SQL to analyze data, generate insights, and build impactful real-world solutions.</strong></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal" aria-label="Contact">
+        <div class="container">
+          <h3 class="section-title">Contact</h3>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-note">No backend required — opens your mail app.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Anmol Pandey. All rights reserved.</p>
+        <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></button>
+      </div>
+    </footer>
+
+    <script defer src="assets/js/script.js"></script>
+  </body>
+  </html>
+
+
