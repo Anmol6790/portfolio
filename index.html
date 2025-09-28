@@ -56,11 +56,12 @@
             <div class="cta-group">
               <a href="#projects" class="btn btn-primary">View Projects</a>
               <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                             <a href="assets/Anmol Cv.pdf" class="btn btn-ghost btn-download" download>
-                 <i class='bx bx-download'></i>
-                 Download CV
-               </a>
+              <a href="assets/Anmol Cv.pdf" class="btn btn-ghost btn-download" download>
+                <i class='bx bx-download'></i>
+                Download CV
+              </a>
             </div>
+            
             <div class="quick-stats" aria-label="Highlights">
               <div class="stat" onclick="scrollToSection('projects')" style="cursor: pointer;">
                 <i class='bx bx-briefcase'></i>
@@ -84,10 +85,11 @@
                 </div>
               </div>
             </div>
-                         <div class="socials" aria-label="Social links">
-               <a href="https://github.com/Anmol6790" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
-               <a href="https://www.linkedin.com/in/anmol-pandey-08b864297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i></a>
-             </div>
+            
+            <div class="socials" aria-label="Social links">
+              <a href="https://github.com/Anmol6790" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+              <a href="https://www.linkedin.com/in/anmol-pandey-08b864297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
           </div>
           <div class="hero-visual">
             <img class="avatar-img" src="assets/anmol_dp.jpg" alt="Anmol Pandey" />
@@ -109,7 +111,7 @@
                   <i class='bx bx-certification' aria-hidden="true"></i>
                   <div>
                     <p class="cert-name">Python Programming</p>
-                    <p class="cert-meta">Infosys Springboard • 2024</p>
+                    <p class="cert-meta">Coursera • 2024</p>
                     <div class="cert-media"><img src="assets/Python.jpeg" alt="Python Programming Certificate" /></div>
                     <div class="cert-actions">
                       <a href="assets/Python.jpeg" class="btn btn-small" target="_blank" rel="noopener">View</a>
@@ -126,7 +128,7 @@
                   <i class='bx bx-certification' aria-hidden="true"></i>
                   <div>
                     <p class="cert-name">Power BI Mastery</p>
-                    <p class="cert-meta">Infosys Springboard • 2025</p>
+                    <p class="cert-meta">Microsoft • 2024</p>
                     <div class="cert-media"><img src="assets/powerbi.jpeg" alt="Power BI Certificate" /></div>
                     <div class="cert-actions">
                       <a href="assets/powerbi.jpeg" class="btn btn-small" target="_blank" rel="noopener">View</a>
@@ -142,8 +144,8 @@
                 <li class="cert-item">
                   <i class='bx bx-certification' aria-hidden="true"></i>
                   <div>
-                    <p class="cert-name">R Programming</p>
-                    <p class="cert-meta">Coursera • 2025</p>
+                    <p class="cert-name">Frontend Development</p>
+                    <p class="cert-meta">Udemy • 2024</p>
                     <div class="cert-media"><img src="assets/r.png" alt="Frontend Development Certificate" /></div>
                     <div class="cert-actions">
                       <a href="assets/r.png" class="btn btn-small" target="_blank" rel="noopener">View</a>
@@ -176,7 +178,7 @@
           <div>
             <div class="about-card">
               <div class="about-row"><span>Location</span><span>Varanasi, Uttar Pradesh</span></div>
-              <div class="about-row"><span>Email</span><span><a href="mailto:anmolpandet6790@gmail.com">anmolpandet6790@gmail.com</a></span></div>
+              <div class="about-row"><span>Email</span><span><a href="mailto:anmolpandey6790@gmail.com">anmolpandey6790@gmail.com</a></span></div>
               <div class="about-row"><span>Phone</span><span><a href="tel:+919335717088">+91 93357 17088</a></span></div>
               <div class="about-row"><span>Freelance</span><span>Available</span></div>
             </div>
@@ -213,15 +215,23 @@
           </div>
           <div class="projects-grid" id="projectsGrid">
             <article class="project-card" data-tags="web,react">
-              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-media job-portal-media" aria-hidden="true">
+                <div class="job-portal-logo">
+                  <div class="job-text">
+                    <span class="job-j">J</span>
+                    <div class="job-o">
+                      <div class="o-left"></div>
+                      <div class="o-right"></div>
+                      <div class="o-pointer"></div>
+                    </div>
+                    <span class="job-b">B</span>
+                  </div>
+                  <div class="portal-text">PORTAL</div>
+                </div>
+              </div>
               <div class="project-body">
                 <h4>Job Portal Website</h4>
                 <p>Built with HTML, CSS, and JavaScript for job seekers and employers, featuring search and responsive design.</p>
-                <div class="project-icons" aria-label="Tech stack">
-                  <i class='bx bxl-html5' aria-hidden="true"></i>
-                  <i class='bx bxl-css3' aria-hidden="true"></i>
-                  <i class='bx bxl-javascript' aria-hidden="true"></i>
-                </div>
                 <div class="project-actions">
                   <a href="https://job-portal-topaz-nu.vercel.app/index.html" class="btn btn-small" aria-label="Live demo" target="_blank" rel="noopener">Live</a>
                   <a href="https://github.com/Anmol6790/JobPortal" class="btn btn-small btn-ghost" aria-label="Source code" target="_blank" rel="noopener">Code</a>
@@ -229,15 +239,19 @@
               </div>
             </article>
             <article class="project-card" data-tags="web,design">
-              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-media amazon-media">
+                <div class="amazon-clean-logo">
+                  <div class="amazon-text-clean">amazon</div>
+                  <div class="amazon-smile-clean">
+                    <svg viewBox="0 0 200 50" class="amazon-arrow-clean">
+                      <path d="M10 25 Q100 5 190 25 Q100 45 10 25" stroke="#FF9900" stroke-width="3" fill="none"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
               <div class="project-body">
                 <h4>Amazon Sales Analysis</h4>
                 <p>Using Power BI, showcasing KPIs, DAX measures, and interactive dashboards for sales insights.</p>
-                <div class="project-icons" aria-label="Tools">
-                  <i class='bx bx-bar-chart-alt-2' aria-hidden="true"></i>
-                  <i class='bx bx-pie-chart-alt' aria-hidden="true"></i>
-                  <i class='bx bx-line-chart' aria-hidden="true"></i>
-                </div>
                 <div class="project-actions">
                   <a href="https://github.com/Anmol6790/Amozon_Sales_Analysis" class="btn btn-small" target="_blank" rel="noopener">Live</a>
                   <a href="https://github.com/Anmol6790/Amozon_Sales_Analysis" class="btn btn-small btn-ghost" target="_blank" rel="noopener">Code</a>
@@ -245,22 +259,87 @@
               </div>
             </article>
             <article class="project-card" data-tags="react">
-              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-media who-media">
+                <div class="who-logo">
+                  <div class="who-emblem">
+                    <div class="who-wreath">
+                      <div class="olive-branch left-branch">
+                        <div class="branch-leaves"></div>
+                      </div>
+                      <div class="olive-branch right-branch">
+                        <div class="branch-leaves"></div>
+                      </div>
+                    </div>
+                    <div class="who-globe">
+                      <div class="globe-grid">
+                        <div class="latitude-lines"></div>
+                        <div class="longitude-lines"></div>
+                      </div>
+                      <div class="globe-continents">
+                        <div class="continent africa"></div>
+                        <div class="continent europe"></div>
+                        <div class="continent asia"></div>
+                        <div class="continent americas"></div>
+                      </div>
+                      <div class="asclepius-rod">
+                        <div class="rod-staff"></div>
+                        <div class="rod-serpent">
+                          <div class="serpent-head"></div>
+                          <div class="serpent-body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="who-text">WHO</div>
+                </div>
+              </div>
               <div class="project-body">
                 <h4>WHO Life Expectancy Analysis</h4>
                 <p>Using R — data cleaning, statistical analysis, and visualization to explore global health trends.</p>
-                <div class="project-icons" aria-label="Tools">
-                  <i class='bx bx-data' aria-hidden="true"></i>
-                  <i class='bx bx-line-chart' aria-hidden="true"></i>
-                  <i class='bx bx-pie-chart-alt' aria-hidden="true"></i>
-                </div>
                 <div class="project-actions">
                   <a href="rpubs.com/anmol_01/LifeExpectancy" class="btn btn-small" target="_blank" rel="noopener">Live</a>
                   <a href="https://github.com/Anmol6790/Global-Life-Expectancy-Analysis-using-WHO-Dataset" class="btn btn-small btn-ghost" target="_blank" rel="noopener">Code</a>
                 </div>
               </div>
             </article>
-            <!-- Only three projects kept as requested -->
+            <article class="project-card" data-tags="design,data">
+              <div class="project-media netflix-media">
+                <div class="netflix-logo">
+                  <span class="netflix-text">NETFLIX</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h4>Netflix User Analytics Dashboard</h4>
+                <p>Comprehensive data visualization dashboard analyzing Netflix user insights, subscription trends, churn behavior, and regional content preferences using Power BI and R.</p>
+                <div class="project-actions">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3YTI5YTAtYzRmMy00NmU5LTgxZmMtNjBkNjc4OTA5YzYxIiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D" class="btn btn-small" aria-label="Live demo" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/Netflix_user_analysis" class="btn btn-small btn-ghost" aria-label="Source code" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-tags="web,design">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h4>E-Commerce Sales Dashboard</h4>
+                <p>Interactive Power BI dashboard for e-commerce analytics, featuring sales trends, customer segmentation, and revenue optimization insights.</p>
+                <div class="project-actions">
+                  <a href="#" class="btn btn-small" aria-label="Live demo" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/Ecommerce-Dashboard" class="btn btn-small btn-ghost" aria-label="Source code" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-tags="data,react">
+              <div class="project-media" aria-hidden="true"></div>
+              <div class="project-body">
+                <h4>Weather Data Analysis App</h4>
+                <p>.</p>
+                <div class="project-actions">
+                  <a href="#" class="btn btn-small" aria-label="Live demo" target="_blank" rel="noopener">Live</a>
+                  <a href="https://github.com/Anmol6790/Weather-Analysis-App" class="btn btn-small btn-ghost" aria-label="Source code" target="_blank" rel="noopener">Code</a>
+                </div>
+              </div>
+            </article>
+            <!-- Projects showcase -->
           </div>
         </div>
       </section>
