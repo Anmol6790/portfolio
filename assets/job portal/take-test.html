@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Test - Job Portal</title>
+    <link rel="stylesheet" href="take-test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <div class="test-info">
+                <h1 id="testTitle">JavaScript Programming Test</h1>
+                <div class="test-meta">
+                    <span class="difficulty intermediate">
+                        <i class="fas fa-signal"></i> Intermediate
+                    </span>
+                    <span class="questions-count">
+                        <i class="fas fa-question-circle"></i> <span id="currentQuestion">1</span>/30 Questions
+                    </span>
+                </div>
+            </div>
+            <div class="timer">
+                <i class="fas fa-clock"></i>
+                <span id="timeLeft">60:00</span>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" style="width: 3.33%"></div>
+        </div>
+
+        <div class="question-container">
+            <div class="question-number">Question 1</div>
+            <div class="question-text">What is the output of the following code?</div>
+            <pre class="code-block">
+console.log(typeof typeof 1);
+            </pre>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q1" id="q1a" value="a">
+                    <label for="q1a">"number"</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" id="q1b" value="b">
+                    <label for="q1b">"string"</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" id="q1c" value="c">
+                    <label for="q1c">"undefined"</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" id="q1d" value="d">
+                    <label for="q1d">"object"</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-footer">
+            <button class="nav-btn" id="prevBtn" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <div class="question-palette">
+                <button class="palette-toggle">
+                    <i class="fas fa-th"></i> Question Palette
+                </button>
+                <div class="palette-dropdown">
+                    <div class="palette-grid">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <button class="nav-btn primary" id="nextBtn">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Submit Confirmation Modal -->
+    <div class="modal" id="submitModal">
+        <div class="modal-content">
+            <h2>Submit Test?</h2>
+            <p>Are you sure you want to submit the test? You have:</p>
+            <ul>
+                <li><span id="answeredCount">0</span> questions answered</li>
+                <li><span id="unansweredCount">30</span> questions unanswered</li>
+                <li><span id="markedCount">0</span> questions marked for review</li>
+            </ul>
+            <div class="modal-actions">
+                <button class="btn secondary" onclick="closeModal()">Continue Test</button>
+                <button class="btn primary" onclick="submitTest()">Submit Test</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Timer functionality
+        let timeLeft = 60 * 60; // 60 minutes in seconds
+        const timerDisplay = document.getElementById('timeLeft');
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft === 0) {
+                submitTest();
+            } else {
+                timeLeft--;
+            }
+        }
+
+        const timer = setInterval(updateTimer, 1000);
+
+        // Question navigation
+        let currentQuestion = 1;
+        const totalQuestions = 30;
+        const progress = document.querySelector('.progress');
+        const currentQuestionSpan = document.getElementById('currentQuestion');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateQuestion(questionNumber) {
+            currentQuestion = questionNumber;
+            currentQuestionSpan.textContent = currentQuestion;
+            progress.style.width = `${(currentQuestion / totalQuestions) * 100}%`;
+            
+            prevBtn.disabled = currentQuestion === 1;
+            if (currentQuestion === totalQuestions) {
+                nextBtn.innerHTML = 'Submit <i class="fas fa-check"></i>';
+                nextBtn.onclick = showSubmitModal;
+            } else {
+                nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+                nextBtn.onclick = () => updateQuestion(currentQuestion + 1);
+            }
+        }
+
+        prevBtn.onclick = () => updateQuestion(currentQuestion - 1);
+        nextBtn.onclick = () => updateQuestion(currentQuestion + 1);
+
+        // Question palette
+        const paletteGrid = document.querySelector('.palette-grid');
+        for (let i = 1; i <= totalQuestions; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'palette-btn';
+            btn.textContent = i;
+            btn.onclick = () => updateQuestion(i);
+            paletteGrid.appendChild(btn);
+        }
+
+        // Submit modal
+        function showSubmitModal() {
+            document.getElementById('submitModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('submitModal').style.display = 'none';
+        }
+
+        function submitTest() {
+            // Add submission logic here
+            alert('Test submitted successfully!');
+            window.location.href = 'skill-assessment.html';
+        }
+
+        // Handle test type selection from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const testType = urlParams.get('test');
+        const testTitle = document.getElementById('testTitle');
+        
+        if (testType) {
+            testTitle.textContent = decodeURIComponent(testType) + ' Test';
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal Support - AI Assistant</title>
+    <link rel="stylesheet" href="support.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-headset"></i> Job Portal Support</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="joblisting.html"><i class="fas fa-list"></i> Job Listings</a></li>
+                    <li><a href="companies.html"><i class="fas fa-building"></i> Companies</a></li>
+                    <li><a href="skill-assessment.html"><i class="fas fa-tasks"></i> Skill Tests</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="support-section">
+        <div class="container">
+            <div class="support-container">
+                <div class="support-sidebar">
+                    <div class="quick-topics">
+                        <h3>Popular Topics</h3>
+                        <ul>
+                            <li><button onclick="askQuestion('How do I create an account?')">
+                                <i class="fas fa-user-plus"></i> Account Creation
+                            </button></li>
+                            <li><button onclick="askQuestion('How do I apply for jobs?')">
+                                <i class="fas fa-briefcase"></i> Job Application
+                            </button></li>
+                            <li><button onclick="askQuestion('How do skill assessments work?')">
+                                <i class="fas fa-tasks"></i> Skill Assessments
+                            </button></li>
+                            <li><button onclick="askQuestion('How do I update my profile?')">
+                                <i class="fas fa-user-edit"></i> Profile Management
+                            </button></li>
+                            <li><button onclick="askQuestion('How do I contact employers?')">
+                                <i class="fas fa-envelope"></i> Employer Contact
+                            </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="advanced-filters">
+                        <h3>Advanced Job Search</h3>
+                        <ul>
+                            <li><button onclick="askQuestion('How to use salary filters in job search?')">
+                                <i class="fas fa-money-bill-wave"></i> Salary Range
+                            </button></li>
+                            <li><button onclick="askQuestion('How to filter jobs by experience level?')">
+                                <i class="fas fa-layer-group"></i> Experience Level
+                            </button></li>
+                            <li><button onclick="askQuestion('How to search jobs by location?')">
+                                <i class="fas fa-map-marker-alt"></i> Location
+                            </button></li>
+                            <li><button onclick="askQuestion('How to filter by job type?')">
+                                <i class="fas fa-clock"></i> Job Type
+                            </button></li>
+                            <li><button onclick="askQuestion('How to filter by company size?')">
+                                <i class="fas fa-building"></i> Company Size
+                            </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="expert-info">
+                        <h3>Expert Tips</h3>
+                        <ul>
+                            <li><button onclick="askQuestion('Tips for creating an effective resume')">
+                                <i class="fas fa-file-alt"></i> Resume Tips
+                            </button></li>
+                            <li><button onclick="askQuestion('How to prepare for job interviews?')">
+                                <i class="fas fa-comments"></i> Interview Prep
+                            </button></li>
+                            <li><button onclick="askQuestion('Tips for salary negotiation')">
+                                <i class="fas fa-handshake"></i> Salary Negotiation
+                            </button></li>
+                            <li><button onclick="askQuestion('Career growth opportunities')">
+                                <i class="fas fa-chart-line"></i> Career Growth
+                            </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="coaching-section">
+                        <h3>Career Coaching</h3>
+                        <ul>
+                            <li><button onclick="askQuestion('What career coaching services are available?')">
+                                <i class="fas fa-graduation-cap"></i> Coaching Services
+                            </button></li>
+                            <li><button onclick="askQuestion('How to find a career coach?')">
+                                <i class="fas fa-user-tie"></i> Find a Coach
+                            </button></li>
+                            <li><button onclick="askQuestion('What are the benefits of career coaching?')">
+                                <i class="fas fa-star"></i> Benefits
+                            </button></li>
+                            <li><button onclick="askQuestion('How to schedule a coaching session?')">
+                                <i class="fas fa-calendar-check"></i> Schedule Session
+                            </button></li>
+                        </ul>
+                    </div>
+
+                    <div class="language-section">
+                        <h3>Language Support</h3>
+                        <ul>
+                            <li><button onclick="askQuestion('How to change portal language?')">
+                                <i class="fas fa-globe"></i> Change Language
+                            </button></li>
+                            <li><button onclick="askQuestion('What languages are supported?')">
+                                <i class="fas fa-language"></i> Supported Languages
+                            </button></li>
+                            <li><button onclick="askQuestion('How to update language preferences?')">
+                                <i class="fas fa-cog"></i> Language Settings
+                            </button></li>
+                            <li><button onclick="askQuestion('How to get language assistance?')">
+                                <i class="fas fa-headset"></i> Language Help
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="ai-info">
+                            <img src="https://via.placeholder.com/40" alt="AI Assistant" class="ai-avatar">
+                            <div class="ai-status">
+                                <h3>AI Support Assistant</h3>
+                                <span class="status-badge">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <img src="https://via.placeholder.com/30" alt="AI" class="message-avatar">
+                            <div class="message-content">
+                                <p>👋 Hello! I'm your AI support assistant. How can I help you today?</p>
+                                <p>You can ask me anything about:</p>
+                                <ul>
+                                    <li>Account management</li>
+                                    <li>Job applications</li>
+                                    <li>Skill assessments</li>
+                                    <li>Profile updates</li>
+                                    <li>Employer communication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <div class="input-container">
+                            <input type="text" id="userInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+                            <button onclick="sendMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="input-suggestions">
+                            <button onclick="askQuestion('How do I reset my password?')">Reset Password</button>
+                            <button onclick="askQuestion('Where can I find my applications?')">My Applications</button>
+                            <button onclick="askQuestion('How to prepare for skill tests?')">Test Preparation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function askQuestion(question) {
+            document.getElementById('userInput').value = question;
+            sendMessage();
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                addUserMessage(message);
+                generateAIResponse(message);
+                input.value = '';
+            }
+        }
+
+        function addUserMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message user-message';
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function addAIMessage(message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ai-message';
+            messageDiv.innerHTML = `
+                <img src="https://via.placeholder.com/30" alt="AI" class="message-avatar">
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function generateAIResponse(question) {
+            // Simulate AI thinking
+            addAIMessage('<i class="fas fa-spinner fa-spin"></i> Thinking...');
+            
+            setTimeout(() => {
+                // Remove thinking message
+                const chatMessages = document.getElementById('chatMessages');
+                chatMessages.removeChild(chatMessages.lastChild);
+                
+                // Generate response based on question
+                let response = '';
+                question = question.toLowerCase();
+
+                if (question.includes('salary filter') || question.includes('salary range')) {
+                    response = `To use salary filters in job search:<br>
+                    1. Click "Advanced Filters" on the job search page<br>
+                    2. Select "Salary Range"<br>
+                    3. Choose minimum and maximum salary<br>
+                    4. You can filter by:<br>
+                       - Monthly salary<br>
+                       - Annual package<br>
+                       - Hourly rate<br><br>
+                    💡 Pro tip: You can also see salary trends for different roles!`;
+                }
+                else if (question.includes('experience level')) {
+                    response = `To filter jobs by experience level:<br>
+                    1. Use the "Experience" dropdown in Advanced Filters<br>
+                    2. Choose from:<br>
+                       - Fresher (0-2 years)<br>
+                       - Junior (2-5 years)<br>
+                       - Mid-Level (5-8 years)<br>
+                       - Senior (8+ years)<br>
+                       - Executive (10+ years)<br><br>
+                    💡 Pro tip: Some roles might have specific experience requirements in certain technologies!`;
+                }
+                else if (question.includes('location')) {
+                    response = `To search jobs by location:<br>
+                    1. Use the location search box<br>
+                    2. Filter options include:<br>
+                       - Remote jobs<br>
+                       - Hybrid work<br>
+                       - On-site only<br>
+                       - Specific cities/regions<br>
+                       - Relocation assistance<br><br>
+                    💡 Pro tip: Enable location alerts for new job postings in your preferred areas!`;
+                }
+                else if (question.includes('job type')) {
+                    response = `To filter by job type:<br>
+                    1. Select "Job Type" in filters<br>
+                    2. Available options:<br>
+                       - Full-time<br>
+                       - Part-time<br>
+                       - Contract<br>
+                       - Freelance<br>
+                       - Internship<br><br>
+                    💡 Pro tip: You can select multiple job types at once!`;
+                }
+                else if (question.includes('company size')) {
+                    response = `To filter by company size:<br>
+                    1. Use "Company Size" filter<br>
+                    2. Categories:<br>
+                       - Startup (1-50 employees)<br>
+                       - Small (51-200 employees)<br>
+                       - Medium (201-1000 employees)<br>
+                       - Large (1000+ employees)<br><br>
+                    💡 Pro tip: Different company sizes often offer different work cultures and opportunities!`;
+                }
+                else if (question.includes('resume') || question.includes('cv')) {
+                    response = `Tips for an effective resume:<br>
+                    1. Structure:<br>
+                       - Clear headings<br>
+                       - Bullet points<br>
+                       - Professional font<br>
+                    2. Content:<br>
+                       - Relevant skills<br>
+                       - Quantifiable achievements<br>
+                       - Keywords from job description<br>
+                    3. Best Practices:<br>
+                       - Keep it concise (1-2 pages)<br>
+                       - Proofread carefully<br>
+                       - Update regularly<br><br>
+                    💡 Pro tip: Use our resume analyzer tool for personalized feedback!`;
+                }
+                else if (question.includes('interview')) {
+                    response = `Interview preparation tips:<br>
+                    1. Research:<br>
+                       - Company background<br>
+                       - Role requirements<br>
+                       - Industry trends<br>
+                    2. Practice:<br>
+                       - Common questions<br>
+                       - Technical skills<br>
+                       - Behavioral scenarios<br>
+                    3. Preparation:<br>
+                       - Prepare questions to ask<br>
+                       - Review your resume<br>
+                       - Plan your attire<br><br>
+                    💡 Pro tip: Use our interview simulation feature to practice!`;
+                }
+                else if (question.includes('salary negotiation')) {
+                    response = `Tips for salary negotiation:<br>
+                    1. Research:<br>
+                       - Industry standards<br>
+                       - Company pay scales<br>
+                       - Your market value<br>
+                    2. Strategy:<br>
+                       - Start high but realistic<br>
+                       - Consider full package<br>
+                       - Be prepared to justify<br>
+                    3. Discussion points:<br>
+                       - Base salary<br>
+                       - Bonuses<br>
+                       - Benefits<br>
+                       - Growth opportunities<br><br>
+                    💡 Pro tip: Use our salary calculator tool for market insights!`;
+                }
+                else if (question.includes('career growth')) {
+                    response = `Career growth opportunities:<br>
+                    1. Skill Development:<br>
+                       - Take skill assessments<br>
+                       - Get certifications<br>
+                       - Join workshops<br>
+                    2. Networking:<br>
+                       - Connect with professionals<br>
+                       - Join industry groups<br>
+                       - Attend events<br>
+                    3. Career Planning:<br>
+                       - Set goals<br>
+                       - Track progress<br>
+                       - Seek mentorship<br><br>
+                    💡 Pro tip: Create a career development plan in your profile!`;
+                }
+                else if (question.includes('account') || question.includes('sign up') || question.includes('create account')) {
+                    response = `To create an account:<br>
+                    1. Click the "Sign Up" button in the top right corner<br>
+                    2. Fill in your personal details<br>
+                    3. Verify your email address<br>
+                    4. Complete your profile<br><br>
+                    Need more help? Just ask!`;
+                }
+                else if (question.includes('apply') || question.includes('job application')) {
+                    response = `To apply for jobs:<br>
+                    1. Search for jobs using filters<br>
+                    2. Click on a job listing<br>
+                    3. Click "Apply Now"<br>
+                    4. Upload your resume and cover letter<br>
+                    5. Fill in any additional information<br>
+                    6. Submit your application<br><br>
+                    You can track your applications in "My Applications" section.`;
+                }
+                else if (question.includes('skill') || question.includes('test') || question.includes('assessment')) {
+                    response = `About Skill Assessments:<br>
+                    1. Choose from 4 categories: Programming, Design, Data Science, Marketing<br>
+                    2. Select a specific test<br>
+                    3. Tests have different difficulty levels<br>
+                    4. Complete within the time limit<br>
+                    5. Get instant results and certificates<br><br>
+                    Would you like to see available tests?`;
+                }
+                else if (question.includes('profile') || question.includes('update profile')) {
+                    response = `To update your profile:<br>
+                    1. Click on your profile picture<br>
+                    2. Select "Edit Profile"<br>
+                    3. Update your information<br>
+                    4. Add skills and experience<br>
+                    5. Upload a new profile picture<br>
+                    6. Save changes<br><br>
+                    Keep your profile updated to attract employers!`;
+                }
+                else if (question.includes('contact') || question.includes('message') || question.includes('employer')) {
+                    response = `To contact employers:<br>
+                    1. Find the job listing or company profile<br>
+                    2. Click "Contact" or "Message"<br>
+                    3. Write your message<br>
+                    4. Wait for a response<br><br>
+                    Remember to be professional in your communication!`;
+                }
+                else if (question.includes('password') || question.includes('reset')) {
+                    response = `To reset your password:<br>
+                    1. Click "Forgot Password"<br>
+                    2. Enter your email address<br>
+                    3. Check your email for reset link<br>
+                    4. Create a new password<br><br>
+                    Need help? I can guide you through each step.`;
+                }
+                else if (question.includes('coaching services') || question.includes('career coaching')) {
+                    response = `Our Career Coaching Services:<br>
+                    1. Individual Coaching:<br>
+                       - One-on-one sessions<br>
+                       - Personalized career planning<br>
+                       - Skill development guidance<br>
+                       - Job search strategy<br>
+                    2. Group Coaching:<br>
+                       - Career workshops<br>
+                       - Networking sessions<br>
+                       - Industry insights<br>
+                       - Peer learning<br>
+                    3. Specialized Programs:<br>
+                       - Leadership development<br>
+                       - Career transition<br>
+                       - Industry-specific coaching<br>
+                       - Entrepreneurship guidance<br><br>
+                    💡 Pro tip: Book a free consultation to discuss your career goals!`;
+                }
+                else if (question.includes('find a coach')) {
+                    response = `To find a career coach:<br>
+                    1. Visit our "Career Coaches" section<br>
+                    2. Browse coach profiles:<br>
+                       - Experience level<br>
+                       - Specializations<br>
+                       - Success stories<br>
+                       - Ratings & reviews<br>
+                    3. Filter by:<br>
+                       - Industry expertise<br>
+                       - Coaching style<br>
+                       - Availability<br>
+                       - Pricing<br><br>
+                    💡 Pro tip: Read client testimonials to find the best match for your needs!`;
+                }
+                else if (question.includes('benefits of career coaching')) {
+                    response = `Benefits of Career Coaching:<br>
+                    1. Career Development:<br>
+                       - Clear career path<br>
+                       - Skill enhancement<br>
+                       - Professional growth<br>
+                    2. Job Search Support:<br>
+                       - Resume optimization<br>
+                       - Interview preparation<br>
+                       - Job market insights<br>
+                    3. Personal Growth:<br>
+                       - Confidence building<br>
+                       - Decision making<br>
+                       - Work-life balance<br><br>
+                    💡 Pro tip: Many employers offer coaching benefits - check with your HR!`;
+                }
+                else if (question.includes('schedule coaching session')) {
+                    response = `To schedule a coaching session:<br>
+                    1. Select your preferred coach<br>
+                    2. Choose session type:<br>
+                       - 30-minute consultation<br>
+                       - 1-hour coaching<br>
+                       - 2-hour intensive<br>
+                       - Package deals<br>
+                    3. Pick available time slots<br>
+                    4. Complete booking<br><br>
+                    💡 Pro tip: Book sessions in advance for your preferred time slots!`;
+                }
+                else if (question.includes('change portal language') || question.includes('change language')) {
+                    response = `To change the portal language:<br>
+                    1. Click on the language icon in the top right corner<br>
+                    2. Select your preferred language from the dropdown<br>
+                    3. The portal will instantly update to your chosen language<br>
+                    4. Your language preference will be saved for future visits<br><br>
+                    💡 Pro tip: You can also set your language preference in your profile settings!`;
+                }
+                else if (question.includes('supported languages')) {
+                    response = `Our portal supports multiple languages:<br>
+                    1. Primary Languages:<br>
+                       - English (Default)<br>
+                       - Hindi<br>
+                       - Spanish<br>
+                       - French<br>
+                    2. Additional Languages:<br>
+                       - German<br>
+                       - Japanese<br>
+                       - Chinese<br>
+                       - Arabic<br><br>
+                    💡 Pro tip: More languages are being added based on user demand!`;
+                }
+                else if (question.includes('language settings') || question.includes('language preferences')) {
+                    response = `To update language preferences:<br>
+                    1. Go to your profile settings<br>
+                    2. Select "Language & Region"<br>
+                    3. Choose your preferred:<br>
+                       - Interface language<br>
+                       - Date format<br>
+                       - Time zone<br>
+                       - Currency format<br>
+                    4. Save your changes<br><br>
+                    💡 Pro tip: You can set different languages for different sections of the portal!`;
+                }
+                else if (question.includes('language assistance') || question.includes('language help')) {
+                    response = `Language assistance options:<br>
+                    1. Support Services:<br>
+                       - Multilingual support team<br>
+                       - Language-specific help guides<br>
+                       - Translation services<br>
+                    2. Resources:<br>
+                       - Language tutorials<br>
+                       - Common phrases guide<br>
+                       - Language learning tips<br>
+                    3. Contact Options:<br>
+                       - Chat in your preferred language<br>
+                       - Email support in multiple languages<br>
+                       - Phone support in major languages<br><br>
+                    💡 Pro tip: Our AI assistant can communicate in multiple languages!`;
+                }
+                else {
+                    response = `I'm not sure I understand your question. Could you please rephrase it? Or you can try these categories:<br>
+                    - Job search filters<br>
+                    - Career advice<br>
+                    - Application process<br>
+                    - Profile optimization<br>
+                    - Expert tips`;
+                }
+
+                addAIMessage(response);
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

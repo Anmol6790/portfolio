@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e8f5e9;
+}
+
+/* Support Section Styles */
+.support-section {
+    padding: 40px 0;
+}
+
+.support-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    min-height: calc(100vh - 160px);
+}
+
+/* Sidebar Styles */
+.support-sidebar {
+    width: 280px;
+    border-right: 1px solid #e9ecef;
+    padding: 20px;
+}
+
+.quick-topics h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.quick-topics ul {
+    list-style: none;
+}
+
+.quick-topics button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.quick-topics button:hover {
+    background: #e8f5e9;
+    color: #4CAF50;
+}
+
+.quick-topics i {
+    width: 20px;
+}
+
+/* Chat Container Styles */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.ai-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ai-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ai-status h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.status-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* Chat Messages Styles */
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    display: flex;
+    gap: 12px;
+    max-width: 80%;
+}
+
+.message-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.message-content {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 12px;
+    color: #2c3e50;
+}
+
+.message-content p {
+    margin-bottom: 8px;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+.message-content ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.user-message {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background: #4CAF50;
+    color: white;
+}
+
+.ai-message .message-content {
+    background: #f8f9fa;
+}
+
+/* Chat Input Styles */
+.chat-input {
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.input-container button {
+    padding: 12px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-container button:hover {
+    background: #45a049;
+}
+
+.input-suggestions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-suggestions button {
+    padding: 8px 16px;
+    background: #e8f5e9;
+    color: #4CAF50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.input-suggestions button:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Expert Info Styles */
+.expert-info {
+    margin-top: 30px;
+}
+
+.coaching-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.coaching-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.coaching-section ul {
+    list-style: none;
+}
+
+.coaching-section button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.coaching-section button:hover {
+    background: #e8f5e9;
+    color: #4CAF50;
+}
+
+.coaching-section i {
+    width: 20px;
+    color: #4CAF50;
+}
+
+.language-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.language-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.language-section ul {
+    list-style: none;
+}
+
+.language-section button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.language-section button:hover {
+    background: #e8f5e9;
+    color: #4CAF50;
+}
+
+.language-section i {
+    width: 20px;
+    color: #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .support-container {
+        flex-direction: column;
+    }
+
+    .support-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+
+    .input-suggestions {
+        display: none;
+    }
+
+    .coaching-section {
+        margin-top: 20px;
+    }
+
+    .language-section {
+        margin-top: 20px;
+    }
+} 

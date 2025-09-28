@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application - Jane Smith</title>
+    <link rel="stylesheet" href="application-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="details-header">
+        <a href="admin.html#applications" class="back-link"><i class="fas fa-arrow-left"></i> Back to Applications</a>
+        <h1>Application Details - Jane Smith</h1>
+    </header>
+
+    <main class="details-container">
+        <section class="left-col">
+            <div class="card applicant-card">
+                <div class="card-header"><h2>Applicant</h2></div>
+                <div class="applicant-info">
+                    <img src="https://via.placeholder.com/80" alt="Jane Smith" class="avatar">
+                    <div>
+                        <h3>Jane Smith</h3>
+                        <p>jane.smith@microsoft.com</p>
+                        <p>+91 98765 22222</p>
+                        <p>Hyderabad, IN</p>
+                    </div>
+                </div>
+                <div class="quick-actions">
+                    <a class="btn primary" href="#"><i class="fas fa-check"></i> Approve</a>
+                    <a class="btn danger" href="#"><i class="fas fa-times"></i> Reject</a>
+                    <a class="btn" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+            <div class="card materials-card">
+                <div class="card-header"><h2>Application Materials</h2></div>
+                <div class="materials">
+                    <a href="#" class="material-item"><i class="fas fa-file"></i> Resume.pdf</a>
+                    <a href="#" class="material-item"><i class="fas fa-file-lines"></i> CoverLetter.pdf</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-col">
+            <div class="card job-card">
+                <div class="card-header"><h2>Job</h2></div>
+                <div class="job-info">
+                    <h3>Frontend Developer</h3>
+                    <div class="meta">
+                        <span><i class="fas fa-building"></i> Microsoft</span>
+                        <span><i class="fas fa-location-dot"></i> Hyderabad, IN</span>
+                        <span><i class="fas fa-briefcase"></i> Full-time</span>
+                        <span><i class="fas fa-indian-rupee-sign"></i> ₹18L - ₹24L</span>
+                    </div>
+                    <p class="description">Stage: Interview. Source: Job Board. Score: 92. Candidate brings strong UI fundamentals with React and TypeScript, and a solid portfolio.</p>
+                </div>
+            </div>
+            <div class="card requirements-card">
+                <div class="card-header"><h2>Requirements</h2></div>
+                <div class="requirements-list">
+                    <div class="req-group">
+                        <h4>Must-have Skills</h4>
+                        <div class="badges">
+                            <span class="badge">HTML</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">React</span>
+                            <span class="badge">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="req-group">
+                        <h4>Good-to-have</h4>
+                        <div class="badges">
+                            <span class="badge">Next.js</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Design Systems</span>
+                        </div>
+                    </div>
+                    <div class="req-group">
+                        <h4>Experience</h4>
+                        <ul class="list">
+                            <li>2-4 years in frontend development</li>
+                            <li>Strong UI/UX sense and accessibility</li>
+                            <li>Built and maintained component libraries</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card timeline-card">
+                <div class="card-header"><h2>Timeline</h2></div>
+                <ul class="timeline">
+                    <li><span>2024-03-14</span> Application submitted</li>
+                    <li><span>2024-03-15</span> Recruiter screen completed</li>
+                    <li><span>2024-03-17</span> Technical interview scheduled</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
